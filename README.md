@@ -1,6 +1,6 @@
 <h1 align="center">
   <img src="assets/logo.svg" width="72" alt=""><br>
-  worktree-port-check
+  WorktreePortCheck
 </h1>
 
 <p align="center">
@@ -8,9 +8,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Arthur031221/worktree-port-check/stargazers"><img src="https://img.shields.io/github/stars/Arthur031221/worktree-port-check?style=social" alt="GitHub stars"></a>
-  <a href="https://github.com/Arthur031221/worktree-port-check/actions/workflows/ci.yml"><img src="https://github.com/Arthur031221/worktree-port-check/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/Arthur031221/worktree-port-check" alt="License"></a>
+  <a href="https://github.com/Arthur031221/WorktreePortCheck/stargazers"><img src="https://img.shields.io/github/stars/Arthur031221/WorktreePortCheck?style=social" alt="GitHub stars"></a>
+  <a href="https://github.com/Arthur031221/WorktreePortCheck/actions/workflows/ci.yml"><img src="https://github.com/Arthur031221/WorktreePortCheck/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/Arthur031221/WorktreePortCheck" alt="License"></a>
 </p>
 
 <p align="center">
@@ -23,18 +23,18 @@
 > [!TIP]
 > Run it from the Git worktree you are testing:
 > ```sh
-> npx --yes --package=github:Arthur031221/worktree-port-check worktree-port-check 3000
+> npx --yes --package=github:Arthur031221/worktree-port-check WorktreePortCheck 3000
 > ```
 
 <p align="center">
   <img src="assets/demo.gif" alt="The command finds a preview server listening from another Git worktree." width="100%">
 </p>
 
-## Why worktree-port-check
+## Why WorktreePortCheck
 
 A preview server can keep running after you switch terminals or open a linked worktree. The port still belongs to a process whose current directory may point at another checkout.
 
-worktree-port-check compares your current Git checkout with every visible process listening on one TCP port. It prints each process cwd, Git root, branch, and comparison result.
+WorktreePortCheck compares your current Git checkout with every visible process listening on one TCP port. It prints each process cwd, Git root, branch, and comparison result.
 
 A matching cwd does not prove which files a server loaded or serves. This check reports process and Git metadata, not application behavior.
 
@@ -96,7 +96,7 @@ The command asks `lsof` for TCP listeners on the selected port, then reads each 
 | --- | --- | --- |
 | [lsof](https://github.com/lsof-org/lsof/blob/master/docs/manpage.md) | Process and open file details, including network sockets | You want the operating system view of a port |
 | [port-whisperer](https://github.com/LarsenCundric/port-whisperer) | Port owner information with process and repository context | You want a broader port inspection workflow |
-| worktree-port-check | Whether visible listener cwd values match the current Git checkout | You want a focused check before using a preview URL |
+| WorktreePortCheck | Whether visible listener cwd values match the current Git checkout | You want a focused check before using a preview URL |
 
 The command relies on OS visibility. It cannot inspect processes hidden by permissions, detect code a server loaded before changing directory, or prove what response an application serves.
 

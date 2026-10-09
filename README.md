@@ -23,7 +23,7 @@
 > [!TIP]
 > Run it from the Git worktree you are testing:
 > ```sh
-> npx --yes --package=github:Arthur031221/worktree-port-check WorktreePortCheck 3000
+> npx --yes --package=github:Arthur031221/worktree-port-check worktree-port-check 3000
 > ```
 
 <p align="center">
